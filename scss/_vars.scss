@@ -1,0 +1,46 @@
+$black: #000;
+$white: #fff;
+$text: #656363;
+$accent1: #d67e34;
+$orange-btn: #ff7400;
+
+
+
+%openSans-400 {
+  font-family: 'OpenSans-Regular';
+  font-weight: 400;
+}
+%openSans-400-it {
+  font-family: 'OpenSans_Condensed-Italic';
+  font-weight: 400;
+}
+%openSans-600 {
+  font-family: 'OpenSans-SemiBold';
+  font-weight: 600;
+}
+%openSans-700 {
+  font-family: 'OpenSans-Bold';
+  font-weight: 700;
+}
+%tinos-400 {
+  font-family: 'Tinos-Regular';
+  font-weight: 400;
+}
+%cookie-400 {
+  font-family: 'Cookie-Regular';
+  font-weight: 400;
+}
+
+ %checkbox-hidden,
+ %radio-hidden {
+   width: 1px;
+   height: 1px;
+   overflow: hidden;
+   clip: rect(0 0 0 0);
+   position: absolute;
+ }
+ %firstLetter{
+  &::first-letter {
+    text-transform: uppercase;
+  }
+ }
