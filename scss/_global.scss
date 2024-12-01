@@ -28,10 +28,12 @@ body {
   @extend %openSans-700;
   font-size: 14px;
   line-height: 19px;
+  text-transform: uppercase;
   color: $white;
   background-color: $orange-btn;
   padding: 14px 18px 14px 18px;
   text-align: center;
+  border: none;
 }
 .title {
   @extend %tinos-400;
@@ -58,7 +60,6 @@ body {
       color: $accent2;
       font-size: 40px;
       line-height: 54px;
-      
     }
   }
 }
