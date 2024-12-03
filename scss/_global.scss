@@ -67,3 +67,19 @@ body {
     }
   }
 }
+
+@media (max-width:487px) {
+  .container {
+    padding: 0 15px;
+  }
+  .title {
+    font-size: 40px;
+    line-height: 46px;
+    width: 180px;
+    margin: 0 auto;
+  }
+  .assortment {
+    flex-direction: column;
+    gap: 20px;
+  }
+}

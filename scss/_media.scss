@@ -1,11 +1,46 @@
-@media (max-width:1250px) {
+
+@media (max-width:1280px) {
   .header {
     background-position: center;
   }
+  .ourmenu {
+    &__control {
+      display: none;
+    }
+  }
+   
 }
-@media (max-width:900px) {
+@media (max-width:1110px) {
+  .story {
+    &__card-block {
+      justify-content: space-around;
+    }
+    &__card {
+      width: 290px;
+      height: 276px;
+      padding: 10px;
+    }
+    &__card-text {
+      font-size: 22px;
+      line-height: 25px;
+    }
+  }
+}
+@media (max-width:1024px) {
+  .story {
+    &__inner {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    &__content {
+      margin-bottom: 45px;
+    }
+  }
+}
+@media (max-width:920px) {
   .menu {
     &__btn {
+      padding: 0;
       border: none;
       width: 30px;
       height: 20px;
@@ -18,7 +53,7 @@
       z-index: 16;
   
       span {
-        background-color: $accent1;
+        background-color: $orange-btn;
         width: 100%;
         height: 3px;
         transition: all .3s;
@@ -105,9 +140,68 @@
       margin: 0 auto 30px auto;
     }
   }
+  .story {
+    &__card-block {
+      flex-direction: column;
+      align-items: center;
+      gap: 15px;
+    }
+    &__card {
+      width: 350px;
+      height: 328px;
+      padding: 35px 20px;
+    }
+  }
+  .dishes {
+    &__item-box {
+      width: auto;
+      flex-wrap: wrap;
+      margin-left: 20px;
+      justify-content: center;
+    }
+    &__item-separator {
+      display: none;
+    }
+  }
 }
+@media (max-width:820px) {
+  .celebrate {
+    &__inner {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    &__title {
+      text-align: center;
+    }
+    &__text {
+      margin-bottom: 40px;
+      text-align: center;
+    }
+  }
+  .dishes {
+    &__title {
+      margin-bottom: 70px;
+    }
+    &__inner {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    &__list {
+      padding-top: 50px;
+      margin-left: 0;
+    }
+    &__item {
+      justify-content: center;
+    }
+  }
+}
+
 @media (max-width:580px) {
+  .header-top {
+    padding-top: 20px;
+  }
   .hero {
+    padding-top: 0;
     &__inner {
       width: 276px;
       margin: 0 auto;
@@ -119,11 +213,13 @@
     &__title {
       font-size: 40px;
       line-height: 46px;
+      margin-bottom: 0;
     }
     &__subtext {
       font-size: 15px;
       line-height: 20px;
-      padding: 0;
+      padding: 0 0 45px;
+      margin-bottom: 0;
       &::before,
       &::after {
         display: none;
@@ -133,5 +229,66 @@
       padding: 14px 44px;
     }
   }
-  
+  .story {
+    &__card {
+      width: 290px;
+      height: 276px;
+      padding: 10px;
+    }
+    &__title {
+      margin-bottom: 50px;
+    }
+    &__content-img {
+      width: 290px;
+    }
+  }
+}
+@media (max-width:487px) {
+ .story {
+  padding: 20px 0 50px;
+  &__content {
+    width: 290px;
+  }
+  &__content-title {
+    margin-bottom: 50px;
+  }
+ }
+ .celebrate {
+  padding: 20px 0 30px;
+  &__title {
+    font-size: 30px;
+    line-height: 34px;
+  }
+ }
+ .dishes {
+  padding: 63px 0 120px;
+  position: relative;
+  &::before {
+    position: absolute;
+    content: '';
+    background-image: url('../images/dishes/pizza.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 474px;
+    z-index: -1;
+    top: 227px;
+  }
+  &__inner {
+    padding-top: 474px;
+
+  }
+  &__img {
+    display: none;
+  }
+  &__item {
+    margin-bottom: 80px;
+  }
+  &__item-name,
+  &__item-prise {
+    font-size: 22px;
+    line-height: 25px;
+  }
+ }
 }

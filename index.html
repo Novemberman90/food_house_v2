@@ -15,7 +15,10 @@
       <div class="container">
         <div class="header-top__inner">
           <a class="header-top__logo" href="#">
-            <img class="header-top__logo-img" src="./images/icon/logo.svg" alt="logo">
+            <picture class="header-top__logo-img">
+              <source srcset="./images/icon/logo-mini.svg" media="(max-width: 580px)">
+              <img src="./images/icon/logo.svg" alt="Company Logo">
+            </picture>
           </a>
           <nav class="menu">
             <button class="menu__btn" type="button">
@@ -71,7 +74,7 @@
       </div>
     </div>
   </header>
-<!--   <main class="main">
+   <main class="main">
     <section class="story">
       <div class="container">
         <div class="story__card-block">
@@ -124,11 +127,11 @@
               </div>
             </div>
           </div>
-          <img src="../images/content/story-bg.jpg" alt="story images">
+          <img class="story__content-img" src="../images/content/story-bg.jpg" alt="story images">
         </div>
       </div>
     </section>
-    <section class="celebrate" style="background-image: url('../images/content/celebrate.jpg');">
+    <section class="celebrate" style="background-image: url(./images/content/celebrate.jpg);">
       <div class="container">
         <div class="celebrate__inner">
           <div class="celebrate__content">
@@ -148,26 +151,33 @@
       <div class="container">
         <h2 class="dishes__title title">Наши <span>Блюда</span></h2>
         <div class="dishes__inner">
-          <img class="dishes__img" src="./images/dishes/pizza.jpg" alt="dishes images">
+          <img class="dishes__img" src="./images/dishes/pizza.jpg">
           <div class="dishes__list">
             <div class="dishes__item">
               <img class="dishes__item-img" src="./images/dishes/humburger.jpg" alt="hamburger mini">
-              <p class="dishes__item-name">Гамбургер мини</p>
-              <span class="dishes__item-separator"></span>
-              <div class="dishes__item-prise"><span>220</span> ₽</div>
+              <div class="dishes__item-box">
+                <p class="dishes__item-name">Гамбургер мини</p>
+                <span class="dishes__item-separator"></span>
+                <div class="dishes__item-prise"><span>220</span> ₽</div>
+              </div>
             </div>
             <div class="dishes__item">
               <img class="dishes__item-img" src="./images/dishes/humburger.jpg" alt="hamburger mini">
-              <p class="dishes__item-name">Гамбургер мини</p>
-              <span class="dishes__item-separator"></span>
-              <div class="dishes__item-prise"><span>220</span> ₽</div>
+              <div class="dishes__item-box">
+                <p class="dishes__item-name">Гамбургер мини</p>
+                <span class="dishes__item-separator"></span>
+                <div class="dishes__item-prise"><span>220</span> ₽</div>
+              </div>
             </div>
             <div class="dishes__item">
               <img class="dishes__item-img" src="./images/dishes/humburger.jpg" alt="hamburger mini">
-              <p class="dishes__item-name">Гамбургер мини</p>
-              <span class="dishes__item-separator"></span>
-              <div class="dishes__item-prise"><span>220</span> ₽</div>
+              <div class="dishes__item-box">
+                <p class="dishes__item-name">Гамбургер мини</p>
+                <span class="dishes__item-separator"></span>
+                <div class="dishes__item-prise"><span>220</span> ₽</div>
+              </div>
             </div>
+            
           </div>
         </div>
       </div>
@@ -228,7 +238,7 @@
         </div>
       </div>
     </section>
-    <section class="review" style="background-color:#E6E5E5;">
+    <!-- <section class="review" style="background-color:#E6E5E5;">
       <div class="container">
         <div class="review__wrapper">
           <div class="swiper review__slider">
@@ -274,8 +284,8 @@
           </div>
         </div>
       </div>
-    </section>
-    <section class="gallery">
+    </section> -->
+    <!-- <section class="gallery">
       <div class="container">
         <h2 class="gallery__title title">Галерея <span>Блюд</span></h2>
         <div class="gallery__content">
@@ -305,8 +315,8 @@
           </div>
         </div>
       </div>
-    </section>
-    <section class="cooks">
+    </section> -->
+    <!-- <section class="cooks">
       <div class="container">
         <h2 class="cooks__title title">Наши <span>Повара</span></h2>
         <div class="cooks__content">
@@ -315,8 +325,8 @@
           <img class="cooks__img" src="./images/cooks/cook-3.jpg" alt="cooks images">
         </div>
       </div>
-    </section>
-  </main> -->
+    </section> -->
+  </main> 
   <footer class="footer" style="background-image: url('./images/content/footer-bg.jpg');"></footer>
   <script src="js/swiper.min.js"></script>
   <script src="js/swiper-bundle.min.js"></script>

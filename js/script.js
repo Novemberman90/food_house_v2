@@ -28,7 +28,7 @@ window.addEventListener('DOMContentLoaded', ()=>{
 
       
     // ourmenu
-  const swiperOurMenu = new Swiper(".ourmenu-slider", {
+  const swiper = new Swiper(".ourmenu-slider", {
     slidesPerView: 3,
     spaceBetween: 30,
     loop: true,
@@ -36,6 +36,19 @@ window.addEventListener('DOMContentLoaded', ()=>{
     nextEl: ".ourmenu__control-next",
     prevEl: ".ourmenu__control-prev",
   },
+  breakpoints: {
+    // when window width is >= 320px
+    0: {
+      slidesPerView: 1,
+    },
+    320: {
+      slidesPerView: 2,
+    },
+    1160: {
+      slidesPerView: 3,
+    },
+
+  }
   });
 
     //review
