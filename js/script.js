@@ -137,7 +137,7 @@ window.addEventListener('DOMContentLoaded', ()=>{
       }
     });
     //вызову модальное окно через некоторе время 
-    const modalTimerId = setTimeout(openModalWindow, 60000);
+    const modalTimerId = setTimeout(openModal, 60000);
 
 
 
