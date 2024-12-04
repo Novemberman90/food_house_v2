@@ -60,7 +60,8 @@
     font-size: 14px;
     line-height: 19px;
     color: $white;
-    &:hover {
+    &:hover,
+    &:active {
       color: $accent1;
     }
   }
@@ -610,4 +611,83 @@
   height: 100vh;
   min-height: 732px;
 }
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1050;
+  display: none;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, .5);
+  &--active {
+    display: block;
+  }
+  &__dialog {
+    max-width: 500px;
+    margin: 40px auto;
+  }
+  
+  &__content {
+    position: relative;
+    width: 100%;
+    padding: 40px;
+    background-color: #fff;
+    border: 1px solid rgba(0, 0, 0, .2);
+    border-radius: 4px;
+    max-height: 80vh;
+    overflow-y: auto;
+  }
+  &__close {
+    width: 20px;
+    height: 20px;
+    top: 15px;
+    right: 14px;
+    position: absolute;
+    &::before,
+    &::after {
+      position: absolute;
+      content: '';
+      width: 100%;
+      height: 3px;
+      background-color: $orange-btn;
+      top: 50%;
+      transform: translate(-50%);
+    }
+    &::before {
+      transform: rotate(45deg);
+    }
+    &::after {
+      transform: rotate(-45deg);
+    }
+    &:hover,
+    &:active {
+      background-color: $accent1;
+    }
+  }
+  
+  &__title {
+    text-align: center;
+    font-size: 22px;
+    text-transform: uppercase;
+  }
+  
+  &__input {
+    display: block;
+    margin: 20px auto 20px auto;
+    width: 280px;
+    height: 50px;
+    background: #fff;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, .2);
+    border: none;
+    font-size: 18px;
+    text-align: center;
+    padding: 0 20px;
+    outline: 0;
+  }
+}
+
+
 @import 'media';

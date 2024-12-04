@@ -10,8 +10,8 @@
   <title>Food House</title>
 </head>
 <body>
-  <header class="header" id="header" style="background-image: url('../images/content/hero-bg.jpg');">
-    <div class="header-top">
+  <header class="header" style="background-image: url('../images/content/hero-bg.jpg');">
+    <div class="header-top" id="header">
       <div class="container">
         <div class="header-top__inner">
           <a class="header-top__logo" href="#">
@@ -56,7 +56,7 @@
                   <p class="menu__user-text">Свяжитесь с нами для
                   бронирования</p>
                 </div>
-                <button class="menu__user-btn order-btn" type="button">ЗАКАЗ СТОЛИКА</button>
+                <button class="menu__user-btn order-btn" type="button" data-modal>ЗАКАЗ СТОЛИКА</button>
               </div>
             </div>
           </nav>
@@ -75,9 +75,9 @@
     </div>
   </header>
    <main class="main">
-    <section class="story" id="story">
+    <section class="story">
       <div class="container">
-        <div class="story__card-block">
+        <div class="story__card-block"  id="story">
           <div class="story__card">
             <img class="story__img" src="./images/icon/intro-img.svg" alt="food image">
             <h4 class="story__card-title">Магическая <span>Атмосфера</span></h4>
@@ -131,7 +131,7 @@
         </div>
       </div>
     </section>
-    <section class="celebrate" id="celebrate" style="background-image: url(./images/content/celebrate.jpg);">
+    <section class="celebrate" id="celebrate" style="background-image: url(../images/content/celebrate.jpg);">
       <div class="container">
         <div class="celebrate__inner">
           <div class="celebrate__content">
@@ -143,7 +143,7 @@
               Только в этом месяце бизнес-ланч от 250 ₽
             </p>
           </div>
-          <button class="celebrate__btn order-btn" type="button">ЗАКАЗ СТОЛИКА</button>
+          <button class="celebrate__btn order-btn" type="button" data-modal>ЗАКАЗ СТОЛИКА</button>
         </div>
       </div>
     </section>
@@ -327,7 +327,22 @@
       </div>
     </section>
   </main> 
-  <footer class="footer" style="background-image: url('./images/content/footer-bg.jpg');"></footer>
+  <footer class="footer" style="background-image: url('../images/content/footer-bg.jpg');"></footer>
+
+  <div class="modal">
+    <div class="modal__dialog">
+      <div class="modal__content">
+        <form action="#">
+          <div data-close class="modal__close"></div>
+          <div class="modal__title">Мы свяжемся с вами как можно быстрее!</div>
+          <input required placeholder="Ваше имя" name="name" type="text" class="modal__input">
+          <input required placeholder="Ваш номер телефона" name="phone" type="phone" class="modal__input">
+          <button class="modal__btn order-btn">Перезвонить мне</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
   <script src="js/swiper.min.js"></script>
   <script src="js/swiper-bundle.min.js"></script>
   <script src="js/script.js"></script>

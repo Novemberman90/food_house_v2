@@ -142,6 +142,7 @@
       position: absolute;
       top: 118px;
       background-color: $black;
+      opacity: .8;
       flex-direction: column;
       width: 300px;
       right: -200%;
@@ -413,5 +414,10 @@
   &__content {
     gap: 15px;
   }
+ }
+ .modal {
+   &__title {
+   font-size: 18px;
+   }
  }
 }
