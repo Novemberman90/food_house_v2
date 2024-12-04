@@ -42,11 +42,16 @@ window.addEventListener('DOMContentLoaded', ()=>{
       slidesPerView: 1,
     },
     320: {
+      spaceBetween: 20,
+      slidesPerView: 1,
+    },
+    860: {
+      spaceBetween: 30,
       slidesPerView: 2,
     },
-    1160: {
+    1110: {
       slidesPerView: 3,
-    },
+    }
 
   }
   });

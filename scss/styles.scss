@@ -398,11 +398,9 @@
   }
 }
 .ourmenu-slider {
-  /* width: 1110px; */
-  max-width: 1110px;
-  width: 100%;
+  width: 1110px;
   .swiper-slide {
-    max-width: 350px;
+    width: 350px;
     height: 450px;
   }
   &__slide {
@@ -447,7 +445,7 @@
     align-items: center;
     @extend %cookie-400;
     font-size: 30px;
-    line-height: 32px;
+    line-height: 33px;
     color: $white;
     background-color: $accent1;
     border: 7px solid $white;
@@ -471,6 +469,10 @@
     line-height: 22px;
     color: $black;
     margin-bottom: 20px;
+    width: 180px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-height: 40px;
   }
   &__btn {
     @extend %openSans-700;
@@ -555,6 +557,7 @@
   &__content {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     gap: 30px;
   }
   &__item {

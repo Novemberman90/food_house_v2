@@ -10,7 +10,7 @@
   <title>Food House</title>
 </head>
 <body>
-  <header class="header" style="background-image: url('../images/content/hero-bg.jpg');">
+  <header class="header" id="header" style="background-image: url('../images/content/hero-bg.jpg');">
     <div class="header-top">
       <div class="container">
         <div class="header-top__inner">
@@ -27,16 +27,16 @@
             <div class="menu__inner">
               <ul class="menu__list">
                 <li class="menu__item">
-                  <a class="menu__item-link" href="#">ГЛАВНАЯ</a>
+                  <a class="menu__item-link" href="#hero">ГЛАВНАЯ</a>
                 </li>
                 <li class="menu__item">
-                  <a class="menu__item-link" href="#">МЕНЮ</a>
+                  <a class="menu__item-link" href="#menu">МЕНЮ</a>
                 </li>
                 <li class="menu__item">
-                  <a class="menu__item-link" href="#">О НАС</a>
+                  <a class="menu__item-link" href="#story">О НАС</a>
                 </li>
                 <li class="menu__item">
-                  <a class="menu__item-link" href="#">БРОНЬ</a>
+                  <a class="menu__item-link" href="#celebrate">БРОНЬ</a>
                 </li>
               </ul>
               <a class="menu__cart" href="#">
@@ -63,7 +63,7 @@
         </div>
       </div>
     </div>
-    <div class="hero">
+    <div class="hero" id="hero">
       <div class="container">
         <div class="hero__inner">
           <h2 class="hero__subtitle">Добро пожаловать в</h2>
@@ -75,7 +75,7 @@
     </div>
   </header>
    <main class="main">
-    <section class="story">
+    <section class="story" id="story">
       <div class="container">
         <div class="story__card-block">
           <div class="story__card">
@@ -131,7 +131,7 @@
         </div>
       </div>
     </section>
-    <section class="celebrate" style="background-image: url(./images/content/celebrate.jpg);">
+    <section class="celebrate" id="celebrate" style="background-image: url(./images/content/celebrate.jpg);">
       <div class="container">
         <div class="celebrate__inner">
           <div class="celebrate__content">
@@ -182,7 +182,7 @@
         </div>
       </div>
     </section>
-    <section class="ourmenu" style="background-image: url('../images/content/ourmenu.jpg');">
+    <section class="ourmenu" id="menu" style="background-image: url('../images/content/ourmenu.jpg');">
       <div class="container">
         <h2 class="ourmenu__title">Наше меню</h2>
         <div class="ourmenu__wrapper">
@@ -238,7 +238,7 @@
         </div>
       </div>
     </section>
-    <!-- <section class="review" style="background-color:#E6E5E5;">
+    <section class="review" style="background-color:#E6E5E5;">
       <div class="container">
         <div class="review__wrapper">
           <div class="swiper review__slider">
@@ -284,8 +284,8 @@
           </div>
         </div>
       </div>
-    </section> -->
-    <!-- <section class="gallery">
+    </section>
+    <section class="gallery">
       <div class="container">
         <h2 class="gallery__title title">Галерея <span>Блюд</span></h2>
         <div class="gallery__content">
@@ -315,17 +315,17 @@
           </div>
         </div>
       </div>
-    </section> -->
-    <!-- <section class="cooks">
+    </section>
+    <section class="cooks">
       <div class="container">
         <h2 class="cooks__title title">Наши <span>Повара</span></h2>
         <div class="cooks__content">
-          <img class="cooks__img" src="./images/cooks/cook-1.jpg" alt="cooks images">
           <img class="cooks__img" src="./images/cooks/cook-2.jpg" alt="cooks images">
+          <img class="cooks__img" src="./images/cooks/cook-1.jpg" alt="cooks images">
           <img class="cooks__img" src="./images/cooks/cook-3.jpg" alt="cooks images">
         </div>
       </div>
-    </section> -->
+    </section>
   </main> 
   <footer class="footer" style="background-image: url('./images/content/footer-bg.jpg');"></footer>
   <script src="js/swiper.min.js"></script>
