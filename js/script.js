@@ -93,6 +93,7 @@ window.addEventListener('DOMContentLoaded', ()=>{
   });
 
 
+
   // modal
   const button =  document.querySelectorAll('[data-modal]');
   const modalWindow = document.querySelector('.modal');
@@ -140,14 +141,76 @@ window.addEventListener('DOMContentLoaded', ()=>{
     const modalTimerId = setTimeout(openModal, 60000);
 
 
+    const form = document.querySelectorAll('form');
 
-      // Создаю дополнительное окно типа благорадности за отправку формы 
+    const message = {
+      loading: './images/spinner.svg',
+      success: 'Спасибо! Скоро мы с вами свяжемся',
+      failure: 'Что-то пошло не так...'
+    }
 
-    function showThanksModal(message) { // в аргументы передаю объект message где находятся сообщения и мне нужно всеголишь выбрать нужное
+    form.forEach(item => {
+      bindPostData(item);
+    });
+
+    const postData = async (url, data) => {
+      //сюда передаю адресс сервера и data данные, что будут постится POST
+
+      const res = await fetch(url, { // url это куда шлем запрос т.е. где сервер 
+        method: "POST", // это каким образом 
+        headers: { // это тоже каким образом
+        'Content-type': 'application/json'
+        },
+        body: data, // это что именно посылаю
+      });
+
+      return await res.json(); // это сам Промис, который я возвращаю для обработки через цепочку
+    };
+
+      // отправка формы
+    function bindPostData(form) {
+      form.addEventListener('submit', (e)=>{
+        e.preventDefault();
+
+        // создаю спинер ожидания
+        const statusMessage = document.createElement('img');
+        statusMessage.src = message.loading;
+        statusMessage.style.cssText = `
+        display: block;
+        margin: 0 auto;
+        `;
+
+        // вставляю в конец формы
+        form.insertAdjacentElement('afterend', statusMessage);
+
+        // Данные с формы превращаю в JSON объект для отправки на сервер
+        const formData = new FormData(form);
+        const json = JSON.stringify(Object.fromEntries(formData.entries()));
+
+        postData('http://localhost:3000/requests', json)
+        .then(data =>{
+          console.log(data); // тут request.response - это data
+          showThanksModal(message.success);// буду использовать для выовда статуса в качестве спинера 
+          statusMessage.remove();
+        }).catch(()=>{
+          showThanksModal(message.failure);
+        }).finally(()=>{
+          form.reset();// ощищаю форму
+        });
+
+      });
+
+    };
+
+
+
+     // Создаю дополнительное окно типа благорадности за отправку формы 
+
+    function showThanksModal(message) { 
       const prevModalDialog = document.querySelector('.modal__dialog');
 
-      /* Прячу текущее */
-      prevModalDialog.classList.add('hide');
+   /* Прячу текущее Modal */
+      prevModalDialog.classList.add('hide'); 
       openModal();
 
       /* Создаю новое и присваеваю ему класс  modal__dialog */
@@ -157,19 +220,36 @@ window.addEventListener('DOMContentLoaded', ()=>{
       /* Тперь надо сформировать вёрстку */
       thanksModal.innerHTML = `
       <div class="modal__content">
-        <div class="modal__close" data-close>&times;</div>
+        <div class="modal__close" data-close></div>
         <div class="modal__title">${message}</div>
       </div> `;
 
       // и указываю куда его добавляю
       document.querySelector('.modal').append(thanksModal);
+
       setTimeout(() => {
-        thanksModal.remove(); 
+        thanksModal.remove(); // этот шаг нужен, чтобы не скапливались эти окна
         prevModalDialog.classList.add('show');
         prevModalDialog.classList.remove('hide');
         closeModal();
       }, 4000);
-    }
+    };
+
+    // функция получения данных с сервера 
+
+    const getResource = async (url) => {
+      const res = await fetch(url);
+      if(!res.ok) { // если НЕ ок
+        throw new Error(`Could not fetch ${url}, status: ${res.status}`);
+      }
+      return await res.json();
+    };
+
+    /* Работа с базой данных */
+  /*   fetch('http://localhost:3000/requests')
+    .then(data => data.json()).then(data => console.log(data))
+    .then(res => console.log(res));
+ */
 });
     
 
