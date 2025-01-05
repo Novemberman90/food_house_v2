@@ -7,9 +7,10 @@
 
 
 .header{
-  background-position: inherit;
+  background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+  min-height: 800px;
 }
 .header-top {
   position: fixed;
@@ -126,14 +127,22 @@
 }
 
 .hero {
-  padding-top: 118px;
+  /*   background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 800px; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 220px;
+  
   &__inner {
+    width: 556px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    min-height: calc(100vh - 118px);
-    width: 556px;
     justify-content: center;
+    margin: 100px 0 125px;
   }
 
   &__subtitle,
@@ -192,17 +201,13 @@
     padding: 14px 28px;
     background-color: $orange-btn;
   }
-}
-//story
-.story {
-  padding-bottom: 120px;
+
   &__card-block {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: relative;
-    top: -106px;
   }
+
   &__card {
     width: 350px;
     height: 328px;
@@ -213,21 +218,25 @@
     box-shadow: 10px 10px 40px 20px rgba(0, 0, 0, 0.1);
     background-color: $white;
   }
+
   &__img {
     width: 87px;
     height: 87px;
     object-fit: cover;
   }
+
   &__card-title {
     @extend %tinos-400;
     font-size: 26px;
     line-height: 30px;
     color: $black;
     margin-bottom: 20px;
+
     span {
       color: $accent2;
     }
   }
+
   &__card-text {
     @extend %tinos-400;
     font-size: 26px;
@@ -239,6 +248,11 @@
     text-overflow: ellipsis;
     max-height: 100px;
   }
+
+}
+//story
+.story {
+  padding: 370px 0 120px;
   &__inner {
     display: flex;
     justify-content: space-between;

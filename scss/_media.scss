@@ -33,7 +33,7 @@
   }
 }
 @media (max-width:1110px) {
-  .story {
+  .hero {
     &__card-block {
       justify-content: space-around;
     }
@@ -181,7 +181,7 @@
       margin: 0 auto 30px auto;
     }
   }
-  .story {
+  .hero {
     &__card-block {
       flex-direction: column;
       align-items: center;
@@ -192,6 +192,9 @@
       height: 328px;
       padding: 35px 20px;
     }
+  }
+  .story {
+    padding-top: 1000px;
   }
   .dishes {
     &__item-box {
@@ -253,6 +256,57 @@
   }
 }
 @media (max-width:748px) {
+  .hero {
+    padding-top: 200px;
+    &__inner {
+      width: 276px;
+      margin: 100px auto 202px;
+    }
+
+    &__subtitle {
+      font-size: 30px;
+      line-height: 34px;
+    }
+
+    &__title {
+      font-size: 40px;
+      line-height: 46px;
+      margin-bottom: 0;
+    }
+
+    &__subtext {
+      font-size: 15px;
+      line-height: 20px;
+      padding: 0 0 45px;
+      margin-bottom: 0;
+
+      &::before,
+      &::after {
+        display: none;
+      }
+    }
+
+    &__btn {
+      padding: 14px 44px;
+    }
+
+    &__card {
+      width: 290px;
+      height: 276px;
+      padding: 10px;
+    }
+  }
+  .story {
+    padding-top: 830px;
+
+    &__title {
+      margin-bottom: 50px;
+    }
+
+    &__content-img {
+      width: 290px;
+    }
+  }
 .ourmenu-slider {
     width: 290px;
   }
@@ -269,52 +323,15 @@
 @media (max-width:580px) {
   .header-top {
     padding-top: 20px;
+    &__logo{
+      width: 45px;
+      height: 35px;
+      object-fit: cover;
+    }
   }
   .menu{
     &__inner {
-      top: 88px;
-    }
-  }
-  .hero {
-    padding-top: 0;
-    &__inner {
-      width: 276px;
-      margin: 0 auto;
-    }
-    &__subtitle {
-      font-size: 30px;
-      line-height: 34px;
-    }
-    &__title {
-      font-size: 40px;
-      line-height: 46px;
-      margin-bottom: 0;
-    }
-    &__subtext {
-      font-size: 15px;
-      line-height: 20px;
-      padding: 0 0 45px;
-      margin-bottom: 0;
-      &::before,
-      &::after {
-        display: none;
-      }
-    }
-    &__btn {
-      padding: 14px 44px;
-    }
-  }
-  .story {
-    &__card {
-      width: 290px;
-      height: 276px;
-      padding: 10px;
-    }
-    &__title {
-      margin-bottom: 50px;
-    }
-    &__content-img {
-      width: 290px;
+      top: 55px;
     }
   }
   .ourmenu {
@@ -342,7 +359,7 @@
     }
   }
  .story {
-  padding: 20px 0 50px;
+  padding-bottom: 50px;
   &__content {
     width: 290px;
   }
