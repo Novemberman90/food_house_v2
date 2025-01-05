@@ -333,10 +333,15 @@
     <div class="modal__dialog">
       <div class="modal__content">
         <form action="#">
+              <!-- Hidden Required Fields -->
+              <input type="hidden" name="project_name" value="/archiviz.biz/mail-test/">
+              <input type="hidden" name="admin_email" value="alexledovit@gmail.com">
+              <input type="hidden" name="form_subject" value="Form footer">
+              <!-- END Hidden Required Fields -->
           <div data-close class="modal__close"></div>
           <div class="modal__title">Мы свяжемся с вами как можно быстрее!</div>
-          <input required placeholder="Ваше имя" name="name" type="text" class="modal__input">
-          <input required placeholder="Ваш номер телефона" name="phone" type="phone" class="modal__input">
+          <input required placeholder="Ваше имя" name="Name" type="text" class="modal__input">
+          <input required placeholder="Ваш номер телефона" name="Phone" type="phone" class="modal__input">
           <button class="modal__btn order-btn">Перезвонить мне</button>
         </form>
       </div>

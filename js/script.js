@@ -187,14 +187,19 @@ window.addEventListener('DOMContentLoaded', ()=>{
         const formData = new FormData(form);
         const json = JSON.stringify(Object.fromEntries(formData.entries()));
 
+        //'http://mail-test.archiviz.biz/mail.php'
         postData('http://localhost:3000/requests', json)
         .then(data =>{
           console.log(data); // тут request.response - это data
-          showThanksModal(message.success);// буду использовать для выовда статуса в качестве спинера 
+           if (data.message.includes("успешно")) {
+             showThanksModal(message.success);// буду использовать для выовда статуса в качестве спинера 
+           }
           statusMessage.remove();
-        }).catch(()=>{
+        })
+        .catch(()=>{
           showThanksModal(message.failure);
-        }).finally(()=>{
+        })
+        .finally(()=>{
           form.reset();// ощищаю форму
         });
 
